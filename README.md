@@ -25,3 +25,4 @@ results = model.train(
 When running a YOLO classification task, copy the DynamicThresholdFocalLoss function from dtfl.py into ...\ultralytics\utils\loss.py. Then, replace the existing v8ClassificationLoss function in loss.py with the v8ClassificationLoss function from dtfl.py. You can specify the model scale to run within the v8ClassificationLoss function.
 Oxford102：https://www.robots.ox.ac.uk/~vgg/data/flowers/102/
 Oxford17：https://www.robots.ox.ac.uk/~vgg/data/flowers/17/
+YOLOv13 download link：https://github.com/iMoonLab/yolov13
