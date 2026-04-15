@@ -67,7 +67,7 @@ class DynamicThresholdFocalLoss(nn.Module):
             # Warm-up phase: Directly use the mean of p_t from the current batch to avoid fluctuations caused by a small number of historical values.
             p_t_smoothed = mean_pos_pt
         else:
-            # Stabilization phase: EMA smoothing (historical 0.3 + current 0.7)
+            # Stabilization phase: SMA smoothing (historical 0.3 + current 0.7)
             p_t_old = sum(self.p_t_history) / len(self.p_t_history)
             p_t_smoothed = 0.3 * p_t_old + 0.7 * mean_pos_pt                          # Formula 2
 
