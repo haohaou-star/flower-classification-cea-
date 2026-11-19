@@ -1,0 +1,104 @@
+NOTICE
+======
+
+This repository contains two distinct kinds of material:
+
+  1. Training / inference code for Dynamic Threshold Focal Loss (DTFL)
+     and the associated configuration files  ->  MIT (see LICENSE)
+
+  2. An Android application that runs the trained weights on-device
+     (the `android_app/` directory)          ->  MIT (see LICENSE)
+
+
+Upstream attribution
+--------------------
+
+The network architecture used by the models in this work is YOLOv13.
+
+  YOLOv13
+    Repository : https://github.com/iMoonLab/yolov13
+    Paper      : Lei, M., Li, S., Wu, Y., et al. (2025).
+                 "YOLOv13: Real-Time Object Detection with Hypergraph-Enhanced
+                 Adaptive Visual Perception." arXiv:2506.17733.
+                 https://doi.org/10.48550/arXiv.2506.17733
+    Licence    : GNU Affero General Public License v3.0 (AGPL-3.0)
+
+  Ultralytics YOLO (the codebase YOLOv13 is built upon)
+    Repository : https://github.com/ultralytics/ultralytics
+    Licence    : GNU Affero General Public License v3.0 (AGPL-3.0)
+
+No YOLOv13 or Ultralytics source code is vendored, copied, or modified in this
+repository. The upstream projects are referenced by URL only; the DTFL
+implementation in `dtfl.py` and the Android application source are original work.
+Referencing an upstream project by URL does not create a derivative work.
+
+The `.pt` checkpoints and the exported `.onnx` models distributed here are
+trained model weights — data and parameters, not program code. Per AGPL-3.0
+section 2, the output of running a covered work is itself covered only if that
+output constitutes a covered work; model weights do not.
+
+If you intend to redistribute this work or a derivative of it, or to use it
+commercially, review the AGPL-3.0 obligations of the upstream projects and
+obtain an Ultralytics Enterprise Licence where appropriate:
+https://www.ultralytics.com/license
+
+
+Bundled third-party components (Android application)
+----------------------------------------------------
+
+  ONNX Runtime (onnxruntime-android 1.20.0)
+    Microsoft Corporation
+    Licence: MIT
+    https://github.com/microsoft/onnxruntime
+
+  AndroidX / Jetpack, Material Components for Android
+    The Android Open Source Project
+    Licence: Apache License 2.0
+
+  Kotlin standard library, kotlinx.coroutines
+    JetBrains s.r.o.
+    Licence: Apache License 2.0
+
+
+Datasets
+--------
+
+No dataset images are distributed in this repository. Only trained model
+weights are provided, and model weights contain no original image pixels.
+
+  Oxford 17 Flowers / Oxford 102 Flowers
+    Nilsback, M.-E. and Zisserman, A.
+    Visual Geometry Group, University of Oxford
+    https://www.robots.ox.ac.uk/~vgg/data/flowers/
+    No formal licence is published by the dataset authors; the images were
+    acquired by web search and photography. Please cite:
+
+      Nilsback, M.-E., & Zisserman, A. (2008). Automated flower classification
+      over a large number of classes. In Sixth Indian Conference on Computer
+      Vision, Graphics & Image Processing. https://doi.org/10.1109/ICVGIP.2008.47
+
+  Private 100-class flower dataset
+    Released by the organisers of the 7th National Collegiate Computer Contest
+    (2025). Copyright remains with the contest organisers. This repository
+    distributes only model weights trained on that dataset.
+
+
+Citation
+--------
+
+If you use this code, the models, or the Android application in academic work,
+please cite:
+
+  @article{yuan2026dtfl,
+    title   = {Improved YOLOv13 with dynamic threshold focal loss: Fine-grained
+               flower classification on embedded devices in precision horticulture},
+    author  = {Yuan, Peiyin and Yang, Peixin and Cui, Weifu},
+    journal = {Smart Agricultural Technology},
+    volume  = {14},
+    pages   = {102112},
+    year    = {2026},
+    doi     = {10.1016/j.atech.2026.102112}
+  }
+
+Archived software release:
+  https://doi.org/10.5281/zenodo.17721837
