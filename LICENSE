@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 haohaou-star
+Copyright (c) 2026 Peiyin Yuan, Peixin Yang, Weifu Cui
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Note on upstream components and model weights: see NOTICE. The YOLOv13 and
+Ultralytics upstream projects referenced by this work are licensed separately
+under AGPL-3.0; no upstream source code is included in this repository.
